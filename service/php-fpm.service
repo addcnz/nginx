@@ -1,0 +1,10 @@
+[Unit]
+Description=php
+After=network.target remote-fs.target nss-lookup.target
+
+[Service]
+Type=forking
+ExecStart=/usr/local/php7/sbin/php-fpm
+
+[Install]
+WantedBy=multi-user.target 
